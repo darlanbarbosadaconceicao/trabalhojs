@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="estilo.css">
+  <title>JavaScript</title>
+ 
+</head>
+<body>
+
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" alt="" width="150" height="150">
+    <h1>JavaScript</h1>
+  </header>
+
+  <div class="btn-container">
+    <button class="btn" onclick="mostrarSecao('intro')">Introdução</button>
+    <button class="btn" onclick="mostrarSecao('criador')">Criador</button>
+    <button class="btn" onclick="mostrarSecao('origem')">Origem</button>
+    <button class="btn" onclick="mostrarSecao('evolucao')">Evolução</button>
+    <button class="btn" onclick="mostrarSecao('onde_é_usado')">Onde é usado</button>
+    <button class="btn" onclick="mostrarSecao('curiosidades')">Curiosidades</button>
+    <button class="btn" onclick="mostrarSecao('exemplo')">Exemplo</button>
+    <button class="btn" onclick="mostrarSecao('referencias')">Referências</button>
+  </div>
+
+  <div id="intro" class="section">
+    <p><strong>O que é JavaScript?</strong><br>
+    JavaScript é uma linguagem de programação essencial para criar <code>interatividade</code> em páginas web. Com ela, podemos manipular o conteúdo da página, responder a ações do usuário e integrar APIs modernas.
+    </p>
+  </div>
+
+  <div id="criador" class="section">
+    <p><strong>Quem criou o JavaScript?</strong><br>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Brendan_Eich_Mozilla_Foundation_official_photo.jpg" alt="" width="100" height="100"> 
+      <br>
+    JavaScript foi criado por <strong>Brendan Eich</strong> em 1995 enquanto trabalhava na Netscape. Ele desenvolveu a primeira versão da linguagem em apenas <strong>10 dias</strong>.
+    </p>
+  </div>
+
+  <div id="origem" class="section">
+    <p><strong>Origem do nome:</strong><br>
+    Inicialmente, a linguagem se chamava <code>Mocha</code>, depois <code>LiveScript</code>. O nome JavaScript foi escolhido por razões de marketing para associá-la ao Java, que era muito popular na época (apesar de serem bem diferentes).
+    </p>
+  </div>
+
+  <div id="evolucao" class="section">
+    <p><strong>Evolução da linguagem:</strong><br>
+    JavaScript evoluiu de uma linguagem simples de scripts para uma poderosa ferramenta usada no <strong>frontend</strong>, <strong>backend</strong> (Node.js), <strong>mobile</strong> (React Native), e até <strong>inteligência artificial</strong>.<br>
+    Com o tempo surgiram bibliotecas como <code>jQuery</code>, e frameworks modernos como <code>React</code>, <code>Vue</code> e <code>Angular</code>.
+    </p>
+  </div>
+
+  <div id="onde_é_usado" class="section">
+  <p><strong>Onde é usado?</strong><br>
+
+
+    <br><strong>🖥️ Navegadores (Frontend)</strong><br>
+   
+    <br><strong>🌐 Servidores (Backend)</strong><br>
+    
+    <br><strong>📱 Aplicativos Móveis</strong><br>
+    
+    <br><strong>🎮 Jogos e Realidade Virtual</strong><br>
+    
+    <br><strong>🤖 Inteligência Artificial e IoT</strong><br>
+   
+  </p>
+</div>
+
+
+  <div id="curiosidades" class="section">
+    <p><strong>Curiosidades:</strong><br>
+    - JavaScript está presente em mais de <strong>95% dos sites</strong> da internet<br>
+    - Não é a mesma coisa que Java!<br>
+    - Roda diretamente no navegador, sem precisar compilar<br>
+    - Com <code>Node.js</code>, é possível criar servidores, bots e aplicativos completos
+    </p>
+  </div>
+
+  <div id="exemplo" class="section">
+  <p><strong>Exemplo de código JavaScript:</strong></p>
+<img class="imagem" src="Captura de tela 2025-06-18 095625.png" alt="">
+  <p>Este exemplo mostra como exibir uma mensagem quando o usuário clica em um botão:</p>
+
+  <button class="exemplo" onclick="mostrarMensagem()">Clique aqui</button>
+
+  <p id="mensagem" style="margin-top: 10px; color: lime; font-family: monospace;"></p>
+
+
+  <script>
+    function mostrarMensagem() {
+      document.getElementById("mensagem").innerText = "Você clicou no botão! JavaScript está funcionando 🚀";
+    }
+  </script>
+</div>
+
+ <div id="referencias" class="section">
+
+<p> 
+  <strong>Referências</strong> <br>
+  
+  <code>Mdn web docs. JavaScript. Disponível em: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript. Acesso em: 18/06/2025. </code> <br>
+  <code>Wikipédia. Brendan Eich. Disponível em: https://pt.wikipedia.org/wiki/Brendan_Eich. Acesso em : 18/06/2025</code>
+
+  </p>
+ </div>
+ 
+
+  <script>
+    function mostrarSecao(id) {
+      const secoes = document.querySelectorAll('.section');
+      secoes.forEach(secao => secao.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
